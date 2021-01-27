@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vortex Image</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100vh;
+        }
+        form {
+            position: fixed;
+            bottom: 0;
+            right:0;
+            background-color: white;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+        input {
+            display: block;
+        }
+        #file {
+            margin-top: 10px;
+        }
+    </style>
+    <script src="main.js" defer></script>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<form>
+    <div>
+        <label>Radius</label>
+        <input type="range" min="50" max="300" onchange="updateRadius(event)" value="200"/>
+    </div>
+    <div>
+        <label>Rotaion</label>
+        <input type="range" min="0" max="360" onchange="updateRotation(event)" value="60"/>
+    </div>
+    <div>
+        <input type="file" accept="image/*" id="file" onchange="updateImage(event)"/>
+    </div>
+</form>
+</body>
+</html>
