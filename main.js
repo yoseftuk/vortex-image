@@ -7,7 +7,7 @@ let url = './demo-image.jpg';
 let img = new Image();
 initCanvas();
 window.addEventListener('resize', initCanvas);
-canvas.addEventListener('mousemove', drawImageVotex);
+window.addEventListener('mousemove', drawImageVotex);
 const cw = () => canvas.width;
 const ch = () => canvas.height;
 const distance = (x1, y1, x2, y2) => Math.sqrt((x1-x2)**2 + (y1-y2)**2);
